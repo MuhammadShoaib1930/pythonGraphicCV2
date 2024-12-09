@@ -1,13 +1,13 @@
-
 import cv2 as cv
 import numpy as np
 import matplotlib.pyplot as plt
 img = cv.imread("football2.jpg")
 img= cv.resize(img,(500,500))
+cv.imwrite("Original.jpeg",img)
 
 ts = img[230:350,160:230]
 img[350:350+350-230,330:330+230-160] = ts
-
+cv.imwrite("change.jpeg",img)
 cv.imshow("s",img)
 plt.imshow(img)
 plt.xlabel("x axis")
